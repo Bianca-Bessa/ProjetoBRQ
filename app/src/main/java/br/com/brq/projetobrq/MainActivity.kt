@@ -1,4 +1,8 @@
 package br.com.brq.projetobrq
 
-class MainActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity() {
+
+
 }
