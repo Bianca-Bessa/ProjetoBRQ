@@ -22,6 +22,7 @@ class LoginActivity : AppCompatActivity() {
 
         carregarElementos()
         carregarEventos()
+        carregarClickTextView()
     }
 
     fun carregarElementos(){
@@ -29,7 +30,6 @@ class LoginActivity : AppCompatActivity() {
         editTextSenha = findViewById(R.id.editText_senha)
         botaoLogin = findViewById(R.id.button)
         botaoLogin.setOnClickListener { abrirCardView() }
-        textView = findViewById(R.id.textView_esqueceuSenha)
         textView = findViewById(R.id.textView_naoTemConta)
     }
 
@@ -39,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
             val email = editTextEmail.text.toString()
             val senha = editTextSenha.text.toString()
 
-            val usuario = Usuario(email = email, senha = senha)
+            val usuario = Usuario(nome = "", endereco = "", bairro = "", cidade = "", telefone = "", email = email, senha = senha, confirmaSenha = "")
 
             if(usuario.validarEmail()){
                 println("EMAIL SUCESSO!!!")
@@ -59,5 +59,12 @@ class LoginActivity : AppCompatActivity() {
     fun abrirCardView(){
         val intent = Intent(this, CardViewActivity::class.java)
         startActivity(intent)
+    }
+
+    fun carregarClickTextView(){
+        textView.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

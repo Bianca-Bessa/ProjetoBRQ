@@ -1,16 +1,12 @@
 package br.com.brq.projetobrq.model
 
-import androidx.annotation.DrawableRes
-import java.io.Serializable
+open class Pessoa (
 
-class Pessoa(
+        open val nome: String,
+        open val endereco: String,
+        open val bairro: String,
+        open val cidade: String,
+        open val telefone: String
 
-        val nome: String,
-        val endereco: String,
-        @DrawableRes
-        val foto: Int,
-        val telefone: Int
-
-) : Serializable
-
-
+){
+}
