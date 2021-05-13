@@ -29,37 +29,42 @@ class LoginActivity : AppCompatActivity() {
         editTextEmail = findViewById(R.id.editText_email)
         editTextSenha = findViewById(R.id.editText_senha)
         botaoLogin = findViewById(R.id.button)
-        botaoLogin.setOnClickListener { abrirCardView() }
+        //botaoLogin.setOnClickListener { abrirCardView() }
         textView = findViewById(R.id.textView_naoTemConta)
     }
 
     fun carregarEventos(){
 
-        editTextEmail.setOnClickListener() {
+        botaoLogin.setOnClickListener() {
             val email = editTextEmail.text.toString()
             val senha = editTextSenha.text.toString()
 
+            var flagValidacao = false
             val usuario = Usuario(nome = "", endereco = "", bairro = "", cidade = "", telefone = "", email = email, senha = senha, confirmaSenha = "")
 
             if(usuario.validarEmail()){
-                println("EMAIL SUCESSO!!!")
-            }else{
+                if (usuario.validarSenha()){
+                    flagValidacao = true
+                }
+                else{
+                    println("SENHA INVÁLIDA")
+                }
+            }
+            else{
                 println("EMAIL INVÁLIDO!!!")
             }
-
-            if (usuario.validarSenha()){
-                println("SENHA SUCESSO!!!")
-            }else{
-                println("SENHA INVÁLIDA")
+            if(flagValidacao){
+                val intent = Intent(this, CardViewActivity::class.java)
+                startActivity(intent)
             }
         }
 
     }
 
-    fun abrirCardView(){
+    /*fun abrirCardView(){
         val intent = Intent(this, CardViewActivity::class.java)
         startActivity(intent)
-    }
+    }*/
 
     fun carregarClickTextView(){
         textView.setOnClickListener {

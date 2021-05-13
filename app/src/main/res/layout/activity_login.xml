@@ -55,6 +55,7 @@
         android:textColor="@color/black"
         android:textSize="25sp"
         android:hint="Senha:"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
