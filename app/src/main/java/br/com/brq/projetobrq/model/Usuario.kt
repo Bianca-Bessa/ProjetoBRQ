@@ -1,5 +1,7 @@
 package br.com.brq.projetobrq.model
 
+import android.provider.ContactsContract
+
 class Usuario(
 
     override val nome: String,
@@ -7,11 +9,12 @@ class Usuario(
     override val bairro: String,
     override val cidade: String,
     override val telefone: String,
+    override val photo: Int,
     val email: String,
     val senha: String,
     val confirmaSenha: String
 
-) : Pessoa(nome, endereco, bairro, cidade, telefone) {
+) : Pessoa(nome, endereco, bairro, cidade, telefone, photo) {
 
     fun validarNome(): Boolean{
         println("valor nome:" + nome)

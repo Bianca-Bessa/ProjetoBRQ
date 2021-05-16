@@ -24,6 +24,8 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
+        supportActionBar?.title = "Cadastro"
+
         carregarElementos()
         carregarEventosClickCadastro()
         carregarEventoClickCancelar()
@@ -69,7 +71,7 @@ class RegisterActivity : AppCompatActivity() {
             val confirmaSenha = editTextConfirmaSenha.text.toString()
 
             var flagValidacao = false
-            val user = Usuario(nome = nome, endereco = endereco, bairro = bairro, cidade = cidade, telefone = telefone, email = email, senha = senha, confirmaSenha = confirmaSenha)
+            val user = Usuario(nome = nome, endereco = endereco, bairro = bairro, cidade = cidade, telefone = telefone, email = email, senha = senha, confirmaSenha = confirmaSenha, photo = 0)
 
             if (user.validarNome()){
                 if (user.validarTelefone()){

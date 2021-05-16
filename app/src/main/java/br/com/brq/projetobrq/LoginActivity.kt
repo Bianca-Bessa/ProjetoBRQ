@@ -20,6 +20,8 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        supportActionBar?.title = "Login"
+
         carregarElementos()
         carregarEventos()
         carregarClickTextView()
@@ -40,7 +42,7 @@ class LoginActivity : AppCompatActivity() {
             val senha = editTextSenha.text.toString()
 
             var flagValidacao = false
-            val usuario = Usuario(nome = "", endereco = "", bairro = "", cidade = "", telefone = "", email = email, senha = senha, confirmaSenha = "")
+            val usuario = Usuario(nome = "", endereco = "", bairro = "", cidade = "", telefone = "", email = email, senha = senha, confirmaSenha = "", photo = 0)
 
             if(usuario.validarEmail()){
                 if (usuario.validarSenha()){
