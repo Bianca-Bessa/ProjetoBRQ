@@ -17,5 +17,38 @@ class CardViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_card_view)
+
+        carregarEventos()
+        eventosClick()
+
+    }
+
+    fun carregarEventos() {
+        btnEncanador = findViewById(R.id.btn_encanador)
+        btnBaba = findViewById(R.id.btn_baba)
+    }
+
+    fun eventosClick() {
+        btnEncanador.setOnClickListener {
+            val intent = Intent(this, PerfisTrabalhadoresActivity::class.java)
+            //Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show()
+
+            val params = Bundle()
+            params.putInt("flag", 1)
+            intent.putExtras(params)
+
+            startActivity(intent)
+        }
+
+        btnBaba.setOnClickListener {
+            val intent = Intent(this, PerfisTrabalhadoresActivity::class.java)
+            //Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show()
+
+            val params = Bundle()
+            params.putInt("flag", 2)
+            intent.putExtras(params)
+
+            startActivity(intent)
+        }
     }
 }

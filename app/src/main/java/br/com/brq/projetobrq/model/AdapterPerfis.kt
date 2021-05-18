@@ -28,6 +28,7 @@ class AdapterPerfis (
     override fun onBindViewHolder(holder: ViewHolderPerfil, position: Int) {
         listaDePerfis[position].also {
             holder.textViewTitulo.text = "${it.nome}"
+            holder.textViewTelefone.text = "${it.telefone}"
             holder.imageViewAvatar.setImageResource(it.photo)
         }
 
@@ -37,16 +38,28 @@ class AdapterPerfis (
     override fun getItemCount(): Int {
         return listaDePerfis.size
     }
+
+    fun update(filtro: ArrayList<Pessoa>){
+        listaDePerfis.clear()
+        listaDePerfis.addAll(filtro)
+        notifyList()
+    }
+
+    private fun notifyList(){
+        notifyDataSetChanged()
+    }
 }
 
 class ViewHolderPerfil(itemView : View, private var onClick: ItemClickListener?) : RecyclerView.ViewHolder(itemView), View.OnClickListener{
 
     var textViewTitulo : TextView
     var imageViewAvatar: ImageView
+    var textViewTelefone: TextView
 
     init {
         textViewTitulo = itemView.findViewById(R.id.txtView_titulo)
         imageViewAvatar = itemView.findViewById(R.id.imageViewAvatar)
+        textViewTelefone = itemView.findViewById(R.id.textView_telefone)
 
         itemView.setOnClickListener(this)
     }
