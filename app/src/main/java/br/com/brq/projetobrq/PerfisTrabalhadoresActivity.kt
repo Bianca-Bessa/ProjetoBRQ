@@ -37,16 +37,28 @@ class PerfisTrabalhadoresActivity : AppCompatActivity(), ItemClickListener {
 
         var params = intent.extras
         var flag = params?.getInt("flag")
+
         if (flag == 1){
+            carregarArrayBaba()
+        }
+        else if (flag == 2){
+            carregarArrayEletricista()
+        }
+        else if (flag == 3){
+            carregarArrayDiarista()
+        }
+        else if (flag == 4){
             carregarArrayEncanador()
         }
-        if (flag == 2){
-            carregarArrayBaba()
+        else if (flag == 5){
+            carregarArrayCabelereiro()
+        }
+        else if (flag == 6){
+            carregarArrayManicure()
         }
 
         carregarElementos()
         carregarFilter()
-        carregarArrayBaba()
 
         AdapterPerfis(this, meuArrayPerfis, this).let {
             adapter = it
