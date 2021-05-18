@@ -1,6 +1,5 @@
 package br.com.brq.projetobrq.model
 
-import android.provider.ContactsContract
 
 class Usuario(
 
@@ -9,13 +8,17 @@ class Usuario(
     override val bairro: String,
     override val cidade: String,
     override val telefone: String,
+
     override val photo: Int,
     override val detalhe: String,
+
     val email: String,
     val senha: String,
     val confirmaSenha: String
 
+
 ) : Pessoa(nome, endereco, bairro, cidade, telefone, detalhe, photo) {
+
 
     fun validarNome(): Boolean{
         println("valor nome:" + nome)
@@ -33,7 +36,7 @@ class Usuario(
     }
 
     fun validarSenha() : Boolean{
-        return senha != "" && email.length >=6
+        return senha != "" && senha.length >=6
     }
 
     fun validarConfimaSenha(): Boolean{

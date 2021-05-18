@@ -59,7 +59,7 @@ class ViewHolderPerfil(itemView : View, private var onClick: ItemClickListener?)
     init {
         textViewTitulo = itemView.findViewById(R.id.txtView_titulo)
         imageViewAvatar = itemView.findViewById(R.id.imageViewAvatar)
-        textViewDetalhe = itemView.findViewById(R.id.textView_telefone)
+        textViewDetalhe = itemView.findViewById(R.id.textView_detalhe)
 
         itemView.setOnClickListener(this)
     }

@@ -20,7 +20,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+
         supportActionBar?.title = "Login"
+
 
         carregarElementos()
         carregarEventos()
@@ -42,7 +44,9 @@ class LoginActivity : AppCompatActivity() {
             val senha = editTextSenha.text.toString()
 
             var flagValidacao = false
+
             var usuario = Usuario(nome = "", endereco = "", bairro = "", cidade = "", telefone = "", email = email, senha = senha, confirmaSenha = "", detalhe = "", photo = 0)
+
 
             if(usuario.validarEmail()){
                 if (usuario.validarSenha()){
@@ -62,11 +66,6 @@ class LoginActivity : AppCompatActivity() {
         }
 
     }
-
-    /*fun abrirCardView(){
-        val intent = Intent(this, CardViewActivity::class.java)
-        startActivity(intent)
-    }*/
 
     fun carregarClickTextView(){
         textView.setOnClickListener {
