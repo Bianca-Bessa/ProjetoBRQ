@@ -29,7 +29,7 @@ class Usuario(
     }
 
     fun validarSenha() : Boolean{
-        return senha != "" && email.length >=6
+        return senha != "" && senha.length >=6
     }
 
     fun validarConfimaSenha(): Boolean{

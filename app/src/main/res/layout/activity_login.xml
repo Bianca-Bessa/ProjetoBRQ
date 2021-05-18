@@ -36,15 +36,14 @@
         android:id="@+id/editText_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="184dp"
         android:layout_marginStart="25dp"
         android:layout_marginEnd="25dp"
+        android:hint="Email:"
         android:textColor="#CF4752"
         android:textSize="25sp"
-        android:hint="Email:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/logoEasyWork" />
+        app:layout_constraintTop_toBottomOf="@+id/logoEasyWork" />
 
     <EditText
         android:id="@+id/editText_senha"
@@ -69,7 +68,6 @@
         android:text="Esqueceu a Senha?"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.831"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
@@ -83,10 +81,9 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_esqueceuSenha"
-        app:layout_constraintVertical_bias="0.81" />
+       />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
