@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ProjetoBrq</string>
+
+    <string-array name="planets_array">
+        <item>Babá</item>
+        <item>Eletricista</item>
+        <item>Diarista</item>
+        <item>Encanador</item>
+        <item>Cabelereira</item>
+        <item>Manicure</item>
+    </string-array>
+
+</resources>
