@@ -6,20 +6,4 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <Button
-        android:id="@+id/btn_encanador"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Encanador"
-        tools:layout_editor_absoluteX="201dp"
-        tools:layout_editor_absoluteY="173dp" />
-
-    <Button
-        android:id="@+id/btn_baba"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Babá"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="82dp" />
 </LinearLayout>

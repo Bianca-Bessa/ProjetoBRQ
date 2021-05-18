@@ -10,11 +10,12 @@ class Usuario(
     override val cidade: String,
     override val telefone: String,
     override val photo: Int,
+    override val detalhe: String,
     val email: String,
     val senha: String,
     val confirmaSenha: String
 
-) : Pessoa(nome, endereco, bairro, cidade, telefone, photo) {
+) : Pessoa(nome, endereco, bairro, cidade, telefone, detalhe, photo) {
 
     fun validarNome(): Boolean{
         println("valor nome:" + nome)

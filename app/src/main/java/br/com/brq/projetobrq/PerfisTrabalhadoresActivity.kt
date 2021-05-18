@@ -96,9 +96,9 @@ class PerfisTrabalhadoresActivity : AppCompatActivity(), ItemClickListener {
 
     fun carregarArrayEncanador(){
         meuArrayPerfis = ArrayList()
-        meuArrayPerfis.add(Pessoa("Bianca", "", "", "", "1122334455", R.drawable.ic_android_black_24dp))
-        meuArrayPerfis.add(Pessoa("Celso", "", "", "", "22334455", R.drawable.ic_android_black_24dp))
-        meuArrayPerfis.add(Pessoa("Pamela", "", "", "", "55667788", R.drawable.ic_android_black_24dp))
+        meuArrayPerfis.add(Pessoa("Bianca", "", "", "", "", "Encanador", R.drawable.ic_android_black_24dp))
+        meuArrayPerfis.add(Pessoa("Celso", "", "", "", "", "Encanador", R.drawable.ic_android_black_24dp))
+        meuArrayPerfis.add(Pessoa("Pamela", "", "", "", "", "Encanador", R.drawable.ic_android_black_24dp))
 
         listaBase = arrayListOf()
         listaBase.addAll(meuArrayPerfis)
@@ -106,9 +106,9 @@ class PerfisTrabalhadoresActivity : AppCompatActivity(), ItemClickListener {
 
     fun carregarArrayBaba(){
         meuArrayPerfis = ArrayList()
-        meuArrayPerfis.add(Pessoa("Paulo", "", "", "", "88997744", R.drawable.ic_baseline_anchor_24))
-        meuArrayPerfis.add(Pessoa("Cassio", "", "", "", "99887766", R.drawable.ic_baseline_anchor_24))
-        meuArrayPerfis.add(Pessoa("Pamela", "", "", "", "66554433", R.drawable.ic_baseline_anchor_24))
+        meuArrayPerfis.add(Pessoa("Paulo", "", "", "", "", "Babá", R.drawable.ic_baseline_anchor_24))
+        meuArrayPerfis.add(Pessoa("Cassio", "", "", "", "", "Babá", R.drawable.ic_baseline_anchor_24))
+        meuArrayPerfis.add(Pessoa("Pamela", "", "", "", "", "Babá", R.drawable.ic_baseline_anchor_24))
 
         listaBase = arrayListOf()
         listaBase.addAll(meuArrayPerfis)
@@ -116,9 +116,9 @@ class PerfisTrabalhadoresActivity : AppCompatActivity(), ItemClickListener {
 
     /*fun carregarArrayEletricista(){
         meuArrayPerfis = ArrayList()
-        meuArrayPerfis.add(Pessoa("Caio", "", "", "", "", R.drawable.ic_android_black_24dp))
-        meuArrayPerfis.add(Pessoa("Amanda", "", "", "", "", R.drawable.ic_android_black_24dp))
-        meuArrayPerfis.add(Pessoa("Jack", "", "", "", "", R.drawable.ic_android_black_24dp))
+        meuArrayPerfis.add(Pessoa("Caio", "", "", "", "", "Eletricista", R.drawable.ic_android_black_24dp))
+        meuArrayPerfis.add(Pessoa("Amanda", "", "", "", "", "Eletricista", R.drawable.ic_android_black_24dp))
+        meuArrayPerfis.add(Pessoa("Jack", "", "", "", "", "Eletricista", R.drawable.ic_android_black_24dp))
 
         listaBase = arrayListOf()
         listaBase.addAll(meuArrayPerfis)
@@ -126,9 +126,9 @@ class PerfisTrabalhadoresActivity : AppCompatActivity(), ItemClickListener {
 
     fun carregarArrayDiarista(){
         meuArrayPerfis = ArrayList()
-        meuArrayPerfis.add(Pessoa("Paloma", "", "", "", "", R.drawable.ic_android_black_24dp))
-        meuArrayPerfis.add(Pessoa("Thiego", "", "", "", "", R.drawable.ic_android_black_24dp))
-        meuArrayPerfis.add(Pessoa("Luiza", "", "", "", "", R.drawable.ic_android_black_24dp))
+        meuArrayPerfis.add(Pessoa("Paloma", "", "", "", "", "Diarista", R.drawable.ic_android_black_24dp))
+        meuArrayPerfis.add(Pessoa("Thiego", "", "", "", "", "Diarista", R.drawable.ic_android_black_24dp))
+        meuArrayPerfis.add(Pessoa("Luiza", "", "", "", "", "Diarista", R.drawable.ic_android_black_24dp))
 
         listaBase = arrayListOf()
         listaBase.addAll(meuArrayPerfis)
@@ -136,9 +136,9 @@ class PerfisTrabalhadoresActivity : AppCompatActivity(), ItemClickListener {
 
     fun carregarArrayCabelereiro(){
         meuArrayPerfis = ArrayList()
-        meuArrayPerfis.add(Pessoa("Andrei", "", "", "", "", R.drawable.ic_android_black_24dp))
-        meuArrayPerfis.add(Pessoa("Brenda", "", "", "", "", R.drawable.ic_android_black_24dp))
-        meuArrayPerfis.add(Pessoa("Carol", "", "", "", "", R.drawable.ic_android_black_24dp))
+        meuArrayPerfis.add(Pessoa("Andrei", "", "", "", "", "Cabelereiro", R.drawable.ic_android_black_24dp))
+        meuArrayPerfis.add(Pessoa("Brenda", "", "", "", "", "Cabelereiro", R.drawable.ic_android_black_24dp))
+        meuArrayPerfis.add(Pessoa("Carol", "", "", "", "", "Cabelereiro", R.drawable.ic_android_black_24dp))
 
         listaBase = arrayListOf()
         listaBase.addAll(meuArrayPerfis)
@@ -146,9 +146,9 @@ class PerfisTrabalhadoresActivity : AppCompatActivity(), ItemClickListener {
 
     fun carregarArrayManicure(){
         meuArrayPerfis = ArrayList()
-        meuArrayPerfis.add(Pessoa("Luiz", "", "", "", "", R.drawable.ic_android_black_24dp))
-        meuArrayPerfis.add(Pessoa("Julia", "", "", "", "", R.drawable.ic_android_black_24dp))
-        meuArrayPerfis.add(Pessoa("Elena", "", "", "", "", R.drawable.ic_android_black_24dp))
+        meuArrayPerfis.add(Pessoa("Luiz", "", "", "", "", "Manicure", R.drawable.ic_android_black_24dp))
+        meuArrayPerfis.add(Pessoa("Julia", "", "", "", "", "Manicure", R.drawable.ic_android_black_24dp))
+        meuArrayPerfis.add(Pessoa("Elena", "", "", "", "", "Manicure", R.drawable.ic_android_black_24dp))
 
         listaBase = arrayListOf()
         listaBase.addAll(meuArrayPerfis)
