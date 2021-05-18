@@ -1,5 +1,6 @@
 package br.com.brq.projetobrq
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.brq.projetobrq.adapter.AdapterProdutoCardView
 import br.com.brq.projetobrq.adapter.OnItemCardClick
 import br.com.brq.projetobrq.model.ProdutoCardView
+import br.com.brq.projetobrq.model.Profissao
 
 
 class CardViewActivity : AppCompatActivity(), OnItemCardClick {
@@ -30,11 +32,13 @@ class CardViewActivity : AppCompatActivity(), OnItemCardClick {
     override fun onItemCardClick(view: View, position: Int) {
         val produtoCardView = arrayDeProdutos[position]
 
-        if (produtoCardView.nome == "Babá") {
-            println("Chamar tela de babá")
-        } else if (produtoCardView.nome == "Eletricista") {
-            println("Chamar tela de Eletricista")
+        when (produtoCardView.profissao) {
+            Profissao.BABA -> startActivity(Intent(this, SplashActivity::class.java))
+            Profissao.ELETRICISTA -> startActivity(Intent(this, SplashActivity::class.java))
+            Profissao.DIARISTA -> startActivity(Intent(this, SplashActivity::class.java))
+            Profissao.ENCANADOR -> startActivity(Intent(this, SplashActivity::class.java))
+            Profissao.CABELEREIRO -> startActivity(Intent(this, SplashActivity::class.java))
+            Profissao.MANICURE -> startActivity(Intent(this, SplashActivity::class.java))
         }
-
     }
 }
