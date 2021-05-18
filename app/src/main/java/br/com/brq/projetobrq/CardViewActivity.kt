@@ -2,14 +2,16 @@ package br.com.brq.projetobrq
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.brq.projetobrq.adapter.AdapterProdutoCardView
+import br.com.brq.projetobrq.adapter.OnItemCardClick
 import br.com.brq.projetobrq.model.ProdutoCardView
 
 
-class CardViewActivity : AppCompatActivity() {
+class CardViewActivity : AppCompatActivity(), OnItemCardClick {
 
     lateinit var listaComponente: RecyclerView
     lateinit var arrayDeProdutos: ArrayList<ProdutoCardView>
@@ -22,6 +24,17 @@ class CardViewActivity : AppCompatActivity() {
 
         listaComponente = findViewById(R.id.nosso_recycler_view)
         listaComponente.layoutManager = GridLayoutManager(this, 2)
-        listaComponente.adapter = AdapterProdutoCardView(arrayDeProdutos, this)
+        listaComponente.adapter = AdapterProdutoCardView(arrayDeProdutos, this, this)
+    }
+
+    override fun onItemCardClick(view: View, position: Int) {
+        val produtoCardView = arrayDeProdutos[position]
+
+        if (produtoCardView.nome == "Babá") {
+            println("Chamar tela de babá")
+        } else if (produtoCardView.nome == "Eletricista") {
+            println("Chamar tela de Eletricista")
+        }
+
     }
 }
