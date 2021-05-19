@@ -11,18 +11,17 @@
         android:layout_width="160dp"
         android:layout_height="45dp"
         android:layout_marginTop="24dp"
+        android:src="@drawable/logo_easywork"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_easywork"></ImageView>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/appCompatButton"
         android:layout_width="380dp"
         android:layout_height="65dp"
         android:layout_marginTop="28dp"
-        android:background="@drawable/background_botton_grid"
         android:letterSpacing="0.3"
         android:text="PROFISSIONAIS"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -30,9 +29,8 @@
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"></androidx.appcompat.widget.AppCompatButton>
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/nosso_recycler_view"
