@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import br.com.brq.projetobrq.model.Usuario
+import com.google.android.material.snackbar.Snackbar
 
 class LoginActivity : AppCompatActivity() {
 
@@ -53,11 +54,11 @@ class LoginActivity : AppCompatActivity() {
                     flagValidacao = true
                 }
                 else{
-                    println("SENHA INVÁLIDA")
+                    Snackbar.make(it, "Senha invalida!", Snackbar.LENGTH_SHORT).show();
                 }
             }
             else{
-                println("EMAIL INVÁLIDO!!!")
+                Snackbar.make(it, "Email invalido!", Snackbar.LENGTH_SHORT).show();
             }
             if(flagValidacao){
                 val intent = Intent(this, CardViewActivity::class.java)
